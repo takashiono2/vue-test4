@@ -7,39 +7,28 @@
   <script src="https://unpkg.com/vue@next"></script>
   <title>Vue.js入門講座</title>
 </head>
-<style>
-  .blue{
-    color: blue;
-  }
-
-  .red{
-    color: red;
-  }
-</style>
 <body>
   <div id="app1">
     <ul>
-      <li v-for="todo in todos">
-        {{ todo.text }}
-      </li>
+      <template1></template1>
+      <template1></template1>
+      <template1></template1>
     </ul>
   </div>
 
   <script>
-    const App1 = {
-      data(){
-        return {
-          todos:[
-            { text: 'PHP'},
-            { text: 'Ruby'},
-            { text: 'Python'}
-          ]
-        }
-      }
-    }
+    const App1 = {}
 
-    app1 = Vue.createApp(App1)
-    app1.mount('#app1')
+    const app = Vue.createApp(App1)
+
+    app.component('template1',{
+      template:`
+        <button>ボタン</button>
+        <br>
+      `
+    })
+
+    app.mount('#app1')
   </script>
 </body>
 </html>
