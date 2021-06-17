@@ -18,14 +18,22 @@
 </style>
 <body>
   <div id="app1">
-    <p v-bind:class="class1">あいうえお</p>
+    <ul>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ul>
   </div>
 
   <script>
     const App1 = {
       data(){
         return {
-        　class1: "blue"
+          todos:[
+            { text: 'PHP'},
+            { text: 'Ruby'},
+            { text: 'Python'}
+          ]
         }
       }
     }
