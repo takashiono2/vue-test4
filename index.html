@@ -10,20 +10,26 @@
 <body>
   <div id="app1">
     <ul>
-      <template1></template1>
-      <template1></template1>
-      <template1></template1>
+      <template1 prop1="次へ"></template1>
+      <template1 v-bind:prop1="varString"></template1>
     </ul>
   </div>
 
   <script>
-    const App1 = {}
+    const App1 = {
+      data(){
+        return {
+          varString: "Hello!"
+        }
+      }
+    }
 
     const app = Vue.createApp(App1)
 
     app.component('template1',{
+      props: ['prop1'],
       template:`
-        <button>ボタン</button>
+        <button>{{prop1}}</button>
         <br>
       `
     })
