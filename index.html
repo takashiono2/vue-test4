@@ -9,20 +9,20 @@
 </head>
 <body>
   <div id="app1">
-    <p>{{ count }}回クリックしました</p>
-    <button v-on:click="increment">カウントを増やす</button>
+    <span v-if="seen">あいうえお</span>
+    <button v-on:click="off">表示OFF</button>
   </div>
 
   <script>
     const App1 = {
       data(){
         return {
-          count: 0
+          seen: true
         }
       },
       methods:{
-        increment: function(){
-          this.count ++;
+        off: function(){
+          this.seen = false ;
         }
       }
     }
