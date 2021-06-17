@@ -1,1 +1,1 @@
-# vue-test2をgithub上で変更
+# vue-test2

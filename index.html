@@ -7,22 +7,25 @@
   <script src="https://unpkg.com/vue@next"></script>
   <title>Vue.js入門講座</title>
 </head>
+<style>
+  .blue{
+    color: blue;
+  }
+
+  .red{
+    color: red;
+  }
+</style>
 <body>
   <div id="app1">
-    <span v-if="seen">あいうえお</span>
-    <button v-on:click="off">表示OFF</button>
+    <p v-bind:class="class1">あいうえお</p>
   </div>
 
   <script>
     const App1 = {
       data(){
         return {
-          seen: true
-        }
-      },
-      methods:{
-        off: function(){
-          this.seen = false ;
+        　class1: "blue"
         }
       }
     }
