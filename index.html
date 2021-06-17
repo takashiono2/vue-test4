@@ -9,17 +9,22 @@
 </head>
 <body>
   <div id="app1">
-    <ul>
-      <template1 prop1="次へ"></template1>
-      <template1 v-bind:prop1="varString"></template1>
-    </ul>
+      <template1 
+      v-for="item in itemList"
+      v-bind:prop1="item"
+      prop2="です"
+      ></template1>
   </div>
 
   <script>
     const App1 = {
       data(){
         return {
-          varString: "Hello!"
+          itemList:[
+            {id: 0, text: '0番'},
+            {id: 1, text: '1番'},
+            {id: 2, text: '2番'}
+          ]
         }
       }
     }
@@ -27,9 +32,9 @@
     const app = Vue.createApp(App1)
 
     app.component('template1',{
-      props: ['prop1'],
+      props: ['prop1','prop2'],
       template:`
-        <button>{{prop1}}</button>
+        <li>{{ prop1.id }}は{{ prop1.text }}{{prop2}}</li>
         <br>
       `
     })
