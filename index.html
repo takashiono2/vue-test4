@@ -4,42 +4,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://unpkg.com/vue@next"></script>
-  <title>Vue.js入門講座</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <title>Vue.js入門決定版</title>
 </head>
 <body>
-  <div id="app1">
-      <template1 
-      v-for="item in itemList"
-      v-bind:prop1="item"
-      prop2="です"
-      ></template1>
+  <div id="app">
+    <p>{{ message }}</p>
+    <p v-if="toggle">
+      <a v-bind:href="url">Vue.js</a>
+    </p>
+    <ul>
+      <li v-for="lang in languages">
+        {{ lang }}
+      </li>
+    </ul>
+    <button v-on:click="click">クリック</button>
+    <input type="text" v-model="message">
   </div>
-
   <script>
-    const App1 = {
-      data(){
-        return {
-          itemList:[
-            {id: 0, text: '0番'},
-            {id: 1, text: '1番'},
-            {id: 2, text: '2番'}
-          ]
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: "Hello World!",
+        url : "https://jp.vuejs.org/v2/guide/index.html",
+        toggle: true,
+        languages: [
+          'js',
+          'ruby',
+          'python'
+        ]
+      },
+      methods: {
+        click: function(){
+          this.message="クリック！"
         }
       }
-    }
-
-    const app = Vue.createApp(App1)
-
-    app.component('template1',{
-      props: ['prop1','prop2'],
-      template:`
-        <li>{{ prop1.id }}は{{ prop1.text }}{{prop2}}</li>
-        <br>
-      `
-    })
-
-    app.mount('#app1')
+    });
   </script>
 </body>
 </html>
