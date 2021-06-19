@@ -1,2 +1,2 @@
 # vue-test3
-**vue.js入門決定版 udemy学習**
+**vue.js入門決定版 udemy**
