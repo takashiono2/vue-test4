@@ -10,16 +10,31 @@
 <body>
   <div id="app">
     <p v-show="toggle">
-      <a v-bind:href="url">{{ message }}</a>
+      <input type="text" v-model="meg">
+      <p><a v-bind:href="url">{{ message }}{{ meg }}</a></p>
     </p>
+    <button v-on:click="clicked">ボタン</button>
+    <ul>
+      <li v-for="lang in languages">{{ lang }}</li>
+    </ul>
   </div>
   <script>
     var app = new Vue({
       el: '#app',
       data: {
+        meg: "",
         message: "test",
         url: "https://www.yahoo.co.jp/",
-        toggle: true
+        toggle: true,
+        languages: [
+          'JavaScript',
+          'pyton',
+          'Ruby'
+        ]},
+      methods: {
+        clicked: function(){
+          this.message = "クリックされた！"
+        }
       }
     });
   </script>
