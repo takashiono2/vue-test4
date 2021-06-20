@@ -9,35 +9,17 @@
 </head>
 <body>
   <div id="app">
-    <p>{{ message }}</p>
-    <p v-if="toggle">
-      <a v-bind:href="url">Vue.js</a>
+    <p v-show:"toggle">
+      <a v-bind:href="url">{{ message }}</a>
     </p>
-    <ul>
-      <li v-for="lang in languages">
-        {{ lang }}
-      </li>
-    </ul>
-    <button v-on:click="click">クリック</button>
-    <input type="text" v-model="message">
   </div>
   <script>
     var app = new Vue({
       el: '#app',
       data: {
-        message: "Hello World!",
-        url : "https://jp.vuejs.org/v2/guide/index.html",
-        toggle: true,
-        languages: [
-          'js',
-          'ruby',
-          'python'
-        ]
-      },
-      methods: {
-        click: function(){
-          this.message="クリック！"
-        }
+        message: "test",
+        url: "https://www.yahoo.co.jp/",
+        toggle: true
       }
     });
   </script>
