@@ -14,6 +14,10 @@ var app = new Vue({
       };
     this.todos.push(todo);
     this.newItem = '';
-    }
+    },
+    deletItem: function(index){
+        // alert(index);
+      this.todos.splice(index,1);
+      }
   }
 });
