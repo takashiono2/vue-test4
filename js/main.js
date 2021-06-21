@@ -1,23 +1,14 @@
 var app = new Vue({
   el: '#app',
   data: {
-    newItem: '',
-    todos:[],
+    bpi: null
   },
-  methods: {
-    addItem: function(event){
-      // alert();
-      if(this.newItem=='')return;
-      var todo = {
-        item: this.newItem,
-        isDone: false
-      };
-    this.todos.push(todo);
-    this.newItem = '';
-    },
-    deletItem: function(index){
-        // alert(index);
-      this.todos.splice(index,1);
-      }
-  }
+  mounted: function(){
+    axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
+    .then(function(response){
+      // console.log(response.data.bpi)
+      // console.log(response.data.bpi.USD.rate_float)
+      this.bpi = response.data.bpi
+    }.bind(this))
+    }
 });
