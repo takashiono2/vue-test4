@@ -9,9 +9,8 @@
 </head>
 <body>
   <div id="app">
-    <p v-pre>
-      {{ message }}
-    </p>
+    <p v-once>{{ message }}</p>
+    <button v-on:click="clickHandler">Click!</button>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script src="js/main.js"></script>
