@@ -5,3 +5,5 @@ udemyの練習
 - v-pre
 - v-html
 - v-cloak
+- v-text
+- javascript式
