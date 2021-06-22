@@ -7,3 +7,4 @@ udemyの練習
 - v-cloak
 - v-text
 - javascript式
+- フィルタ(ローカルフィルタ、グローバルフィルタ)

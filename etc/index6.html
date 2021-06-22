@@ -9,12 +9,23 @@
 </head>
 <body>
   <div id="app">
-    <h2>Mustache</h2>
     <p>
-      {{ price | numberFormat }}
+      {{ message }}
     </p>
-    <h2>v-bind</h2>
-    <input type="text" v-bind:value="price | numberFormat">
+    <p>
+      {{ number + 1 }}
+    </p>
+    <p>
+      {{ message.split('').reverse().join('') }}
+    </p>
+    <p>
+      {{ ok ? 'Yes' : 'No' }}
+    </p>
+    <p>
+      <!-- {{ var x = 1 }} -->
+      <!-- {{ if(ok) return message }} -->
+      {{ ok ? message : 'No' }}
+    </p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script src="js/main.js"></script>
