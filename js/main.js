@@ -1,7 +1,8 @@
 var app = new Vue({
   el: '#app',
   data: {
-    bpi: null
+    bpi: null,
+    hasError: false
   },
   mounted: function(){
     axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
@@ -10,5 +11,14 @@ var app = new Vue({
       // console.log(response.data.bpi.USD.rate_float)
       this.bpi = response.data.bpi
     }.bind(this))
+    .catch(function(error){
+      console.log(error);
+      this.hasError = true;
+    }.bind(this))
+  },
+  filters: {
+    currencyDecimal(value){
+      return value.toFixed(2);
     }
+  }
 });
