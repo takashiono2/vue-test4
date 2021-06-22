@@ -4,3 +4,4 @@ udemyの練習
 - v-once
 - v-pre
 - v-html
+- v-cloak
