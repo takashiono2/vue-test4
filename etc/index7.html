@@ -9,9 +9,12 @@
 </head>
 <body>
   <div id="app">
+    <h2>Mustache</h2>
     <p>
-      {{ jpyPrice | toUSD | numberFormat }}ドル
+      {{ price | numberFormat }}
     </p>
+    <h2>v-bind</h2>
+    <input type="text" v-bind:value="price | numberFormat">
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script src="js/main.js"></script>

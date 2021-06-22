@@ -1,4 +1,8 @@
 //グローバルフィルタ
+Vue.filter('toUSD',function(jpy){
+      return jpy/100;
+    });
+
 Vue.filter('numberFormat',function(value){
       return value.toLocaleString();
     });
@@ -6,19 +10,6 @@ Vue.filter('numberFormat',function(value){
 var app = new Vue({
   el: '#app',
   data:{
-    price: 2980000
+    jpyPrice: 298000000
   }
 });
-
-// 以下、ローカルフィルタ
-// var app = new Vue({
-//   el: '#app',
-//   data:{
-//     price: 2980000
-//   },
-//   filters: {
-//     numberFormat: function(value){
-//       return value.toLocaleString();
-//     }
-//   }
-// });
