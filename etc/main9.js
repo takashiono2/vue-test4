@@ -5,6 +5,6 @@ Vue.filter('readMore',function(text,length,suffix){
 var app = new Vue({
   el: '#app',
   data:{
-    url: 'https://www.yahoo.co.jp/'
+    text:'aaa bbb ccc ddd eee fff ggg hhh iii jjj kkk lll'
   }
 });
