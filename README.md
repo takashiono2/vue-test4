@@ -1,6 +1,6 @@
 **Vue.js入門決定版**
 ----
-udemyの練習
+`udemyの練習`
 - v-once
 - v-pre
 - v-html
@@ -12,3 +12,4 @@ udemyの練習
 - フィルタの引数
 - v-bind省略記法
 - 算出プロパティの基本、算出プロパティとメソッドの比較
+- 算出プロパティのgetterとsetter
