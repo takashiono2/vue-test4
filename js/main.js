@@ -1,10 +1,16 @@
-Vue.filter('readMore',function(text,length,suffix){
-      return text.substring(0,length) + suffix;
-    });
-
 var app = new Vue({
   el: '#app',
-  data:{
-    url: 'https://www.yahoo.co.jp/'
+  data: { 
+    message: 'Hello! Vue.js!'
+  },
+  computed: {
+    reversedMessage: function(){
+      return this.message.split('').reverse().join('');
+    }
+  },
+  methods: {
+    reversedMessageMethod: function(){
+      return this.message.split('').reverse().join('');
+    }
   }
 });
