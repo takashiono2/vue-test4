@@ -8,10 +8,16 @@ var app = new Vue({
     ]
   },
   watch: {
-    handler: function(newValue,oldValue){
-      console.log('Update!')
-    },
-    deep: true
+    colors: {
+      handler: function(newValue,oldValue){
+        console.log('Update!')
+        console.log('newValue: %s,oldValue: %s',
+          JSON.stringify(newValue,null, '\t'),
+          JSON.stringify(oldValue,null, '\t'))
+      },
+    deep: true,
+    immediate: true
+    }
   }
 });
 
