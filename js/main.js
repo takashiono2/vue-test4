@@ -1,24 +1,42 @@
 var app = new Vue({
   el: '#app',
   data: {
-    firstName: '',
-    lastName: ''
-    // fullName: ''
+    colors: [
+      {name:'red'},
+      {name:'green'},
+      {name:'blue'}
+    ]
   },
-  // watch: {
-  //   firstName: function(value){
-  //     this.fullName = value + '' + this.lastName;
-  //   },
-  //   lastName: function(value){
-  //     this.fullName = this.firstName + '' + value;
-  //   }
-  // },
-  computed: {
-    fullName: function(){
-      return this.firstName + '' + this.lastName
-    }
+  watch: {
+    handler: function(newValue,oldValue){
+      console.log('Update!')
+    },
+    deep: true
   }
 });
+
+// No.84 算出プロパティと監視プロパティの比較
+// var app = new Vue({
+//   el: '#app',
+//   data: {
+//     firstName: '',
+//     lastName: ''
+//     // fullName: ''
+//   },
+//   // watch: {
+//   //   firstName: function(value){
+//   //     this.fullName = value + '' + this.lastName;
+//   //   },
+//   //   lastName: function(value){
+//   //     this.fullName = this.firstName + '' + value;
+//   //   }
+//   // },
+//   computed: {
+//     fullName: function(){
+//       return this.firstName + '' + this.lastName
+//     }
+//   }
+// });
 
 // No.83 単位変換アプリ
 // var app = new Vue({
