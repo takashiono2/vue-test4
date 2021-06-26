@@ -10,6 +10,18 @@
 <body>
   <div id="app">
     <p>
+      firstName: <input type="text" v-model:value="firstName">
+    </p>
+    <p>
+      lastName: <input type="text" v-model:value="lastName">
+    </p>
+      fullName: {{ fullName }}
+  </div>
+
+
+  <!-- No.83 単位変換アプリ
+  <div id="app">
+    <p>
       <input type="text" v-model:value="km">km
     </p>
     <p>
@@ -18,7 +30,7 @@
     <p>
       <input type="text" v-model:value="mm">mm
     </p>
-  </div>
+  </div> -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script src="js/main.js"></script>
 </body>
