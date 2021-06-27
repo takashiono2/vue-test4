@@ -8,13 +8,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <div id="app">
+    <p>
+      <input type="text" v-model="keyword">
+    </p>
+    <p>
+      {{ message }}
+    </p>
+    <ul>
+      <li v-for="item in items">
+        <!-- {{ item.title }} -->
+        <a v-bind:href="item.url" target="_blank">{{ item.title }}</a> likes:{{ item.likes_count }}
+    </ul>
+  </div> 
+
+  <!-- No.88 オプションimmediate
   <div id="app">
     <ul>
       <li v-for=" color in colors">
         {{color.name}}
       </li>
     </ul>
-  </div> 
+  </div>  -->
 
   <!-- No.84 算出プロパティと監視プロパティの比較
   <div id="app">
@@ -40,7 +56,9 @@
       <input type="text" v-model:value="mm">mm
     </p>
   </div> -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
