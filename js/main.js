@@ -1,7 +1,8 @@
 var app = new Vue({
   el: '#app',
   data: {
-    isLarge: false
+    isLarge: true,
+    hasError: true
   }
 });
 
