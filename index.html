@@ -10,13 +10,19 @@
 <body>
   
   <div id="app">
+    <input type="text" v-on:keyup.esc.space.up="clear" v-model="message">
+    <p>{{message}}</p>
+  </div>
+  
+  <!-- No.119イベント修飾子の利用例.once
+  <div id="app">
     <button v-on:click.once="clickHandler">
       NOW
     </button>
     <p>
       {{ message }}
     </p>
-  </div>
+  </div> -->
 
   <!-- No.118イベント修飾子
   <div id="app">

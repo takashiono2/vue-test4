@@ -1,14 +1,27 @@
 var app = new Vue({
   el: '#app',
-  data:{
-    message: ''
+  data: {
+    message:''
   },
-  methods:{
-    clickHandler: function(){
-      this.message = new Date().toLocaleTimeString()
+  methods: {
+    clear: function(){
+      this.message = ''
     }
   }
 });
+
+// No.119イベント修飾子の利用例.once
+// var app = new Vue({
+//   el: '#app',
+//   data:{
+//     message: ''
+//   },
+//   methods:{
+//     clickHandler: function(){
+//       this.message = new Date().toLocaleTimeString()
+//     }
+//   }
+// });
 
 // No.118イベント修飾子
 // var app = new Vue({
