@@ -8,7 +8,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
+  <div id="app">
+    <p>{{ counter }}</p>
+    <button v-on:click="counter++">Click!</button>
+  </div>
 
+  <!-- 111.v-ifとv-showの違い
   <div id="app">
     <p v-if=" color==='red' ">
       Stop
@@ -22,7 +28,7 @@
     <p v-else>
       Not red/yellow/bule
     </p>
-  </div>
+  </div> -->
 
   <!-- No.106インラインスタイルのデータバインディングにオブジェクトデータ
   <div id="app">

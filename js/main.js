@@ -1,9 +1,18 @@
+
 var app = new Vue({
   el: '#app',
   data: {
-    color: 'red' 
+    counter: 0
   }
 });
+
+// 111.v-ifとv-showの違い
+// var app = new Vue({
+//   el: '#app',
+//   data: {
+//     color: 'red' 
+//   }
+// });
 
 // No.106インラインスタイルのデータバインディングにオブジェクトデータ
 // var app = new Vue({
