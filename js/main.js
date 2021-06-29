@@ -6,6 +6,9 @@ var app = new Vue({
   methods: {
     clear: function(){
       this.message = ''
+    },
+    clickHandler: function(){
+      alert('alert!');
     }
   }
 });
