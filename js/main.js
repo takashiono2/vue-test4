@@ -1,13 +1,20 @@
-
 var app = new Vue({
   el: '#app',
   data: {
-    styleObject: {
-      color: 'blue',
-      fontSize: '42px'
-    }
+    toggle: false
   }
 });
+
+// No.106インラインスタイルのデータバインディングにオブジェクトデータ
+// var app = new Vue({
+//   el: '#app',
+//   data: {
+//     styleObject: {
+//       color: 'blue',
+//       fontSize: '42px'
+//     }
+//   }
+// });
 
 // No.104クラスの条件に三項演算子を使う
 // var app = new Vue({

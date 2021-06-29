@@ -8,10 +8,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+
+  <div id="app">
+    <p v-if="toggle">
+      YES
+    </p>
+    <p v-else>
+      No
+    </p>
+  </div>
+
+  <!-- No.106インラインスタイルのデータバインディングにオブジェクトデータ
   <div id="app">
     Hello！<span v-bind:style="styleObject">Vue.js</span>
-  </div> 
+  </div>  -->
 
   <!-- No.104クラスの条件に三項演算子を使う
   <div id="app">
