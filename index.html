@@ -10,9 +10,19 @@
 <body>
   
   <div id="app">
-    <p>{{ message }}</p>
-    <button v-on:click="clickHandler('Vue.js')">Click!</button>
+    <button v-on:click.once="clickHandler">
+      NOW
+    </button>
+    <p>
+      {{ message }}
+    </p>
   </div>
+
+  <!-- No.118イベント修飾子
+  <div id="app">
+    <p>{{ message }}</p>
+    <button v-on:click="clickHandler($event,'Vue.js')">Click!</button>
+  </div> -->
 
   <!-- 111.v-ifとv-showの違い
   <div id="app">

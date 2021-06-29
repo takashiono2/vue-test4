@@ -1,16 +1,29 @@
-
 var app = new Vue({
   el: '#app',
-  data: {
-    counter: 0,
-    message:''
+  data:{
+    message: ''
   },
-  methods: {
-    clickHandler: function(message){ 
-      this.message = message;
+  methods:{
+    clickHandler: function(){
+      this.message = new Date().toLocaleTimeString()
     }
   }
 });
+
+// No.118イベント修飾子
+// var app = new Vue({
+//   el: '#app',
+//   data: {
+//     counter: 0,
+//     message:''
+//   },
+//   methods: {
+//     clickHandler: function($event,message){ 
+//       this.message = message;
+//       console.log($event)
+//     }
+//   }
+// });
 
 // 111.v-ifとv-showの違い
 // var app = new Vue({
