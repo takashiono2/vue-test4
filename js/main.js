@@ -1,10 +1,19 @@
 var app = new Vue({
   el: '#app',
   data: {
-    isLarge: true,
-    hasError: true
+    largeClass: 'large',
+    dangerClass: 'text-danger'
   }
 });
+
+// 101.プレーンなクラス属性との共存
+// var app = new Vue({
+//   el: '#app',
+//   data: {
+//     isLarge: true,
+//     hasError: true
+//   }
+// });
 
 // No.97動作の確認
 // var app = new Vue({

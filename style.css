@@ -12,5 +12,24 @@
 
 .text-blue{
   color: blue;
+} 
+
+
+
+/* No.101 プレーンなクラス属性との共存
+.large{
+  font-size: 64px;
 }
+
+.text-danger{
+  color: red;
+}
+
+.bd-gray{
+  background-color: gray;
+}
+
+.text-blue{
+  color: blue;
+} */
 

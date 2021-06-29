@@ -8,9 +8,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
+  <div id="app">
+    Hello！<span v-bind:class="[largeClass,dangerClass]">vue.js</span>
+  </div> 
+
+  <!-- No.101 プレーンなクラス属性との共存
   <div id="app">
     <p>Hello！<span class="bd-gray text-blue" v-bind:class="{large: isLarge,'text-danger': hasError}">vue.js</span></p>
-  </div> 
+  </div>  -->
   
   <!-- No.97 動作の確認
   <div id="app">
@@ -60,8 +66,8 @@
     </p>
   </div> -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script> -->
   <script src="js/main.js"></script>
 </body>
 </html>
