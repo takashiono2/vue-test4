@@ -2,14 +2,12 @@
 var app = new Vue({
   el: '#app',
   data: {
-    counter: 0
+    counter: 0,
+    message:''
   },
   methods: {
-    clickHandler: function(event){ 
-      this.counter++;
-      console.log(event);
-      console.log(event.target.tagName);
-      console.log(event.target.innerHTML);
+    clickHandler: function(message){ 
+      this.message = message;
     }
   }
 });
