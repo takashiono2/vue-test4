@@ -10,8 +10,13 @@
 <body>
   
   <div id="app">
-    Hello！<span v-bind:class="[isLarge ? largeClass : '',dangerClass] ">vue.js</span>
+    Hello！<span v-bind:style="{ color: color,fontSize: fontSize+'px'}">Vue.js</span>
   </div> 
+
+  <!-- No.104クラスの条件に三項演算子を使う
+  <div id="app">
+    Hello！<span v-bind:class="[isLarge ? largeClass : '',dangerClass] ">vue.js</span>
+  </div>  -->
 
   <!-- No.101 プレーンなクラス属性との共存
   <div id="app">

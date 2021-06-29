@@ -1,16 +1,26 @@
+
 var app = new Vue({
   el: '#app',
   data: {
-    largeClass: {
-      large: true,
-      'bd-gray': true
-    },
-    dangerClass: {
-      'text-danger': true
-    },
-    isLarge: true
+    color: 'red',
+    fontSize: 32
   }
 });
+
+// No.104クラスの条件に三項演算子を使う
+// var app = new Vue({
+//   el: '#app',
+//   data: {
+//     largeClass: {
+//       large: true,
+//       'bd-gray': true
+//     },
+//     dangerClass: {
+//       'text-danger': true
+//     },
+//     isLarge: true
+//   }
+// });
 
 // 101.プレーンなクラス属性との共存
 // var app = new Vue({
