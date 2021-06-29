@@ -8,7 +8,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+  <div id="app">
+    <p>Hello！<span v-bind:class="{large: isLarge}">vue.js</span></p>
+  </div> 
+  
+  <!-- No.97 動作の確認
   <div id="app">
     <p>
       <input type="text" v-model="keyword">
@@ -18,10 +22,9 @@
     </p>
     <ul>
       <li v-for="item in items">
-        <!-- {{ item.title }} -->
         <a v-bind:href="item.url" target="_blank">{{ item.title }}</a> likes:{{ item.likes_count }}
     </ul>
-  </div> 
+  </div>  -->
 
   <!-- No.88 オプションimmediate
   <div id="app">
