@@ -2,8 +2,10 @@
 var app = new Vue({
   el: '#app',
   data: {
-    color: 'red',
-    fontSize: 32
+    styleObject: {
+      color: 'blue',
+      fontSize: '42px'
+    }
   }
 });
 
