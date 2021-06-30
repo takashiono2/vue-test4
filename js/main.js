@@ -1,17 +1,25 @@
 var app = new Vue({
   el: '#app',
   data: {
-    message:''
-  },
-  methods: {
-    clear: function(){
-      this.message = ''
-    },
-    clickHandler: function(){
-      alert('alert!');
-    }
+    colors: []
   }
 });
+
+// No.122v-on省略記法
+// var app = new Vue({
+//   el: '#app',
+//   data: {
+//     message:''
+//   },
+//   methods: {
+//     clear: function(){
+//       this.message = ''
+//     },
+//     clickHandler: function(){
+//       alert('alert!');
+//     }
+//   }
+// });
 
 // No.119イベント修飾子の利用例.once
 // var app = new Vue({
