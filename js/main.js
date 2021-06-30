@@ -1,9 +1,21 @@
+var helloCompornent = {
+  template: '<p>hello</p>'
+}
+
 var app = new Vue({
   el: '#app',
-  data: {
-    age: 0
+  components:{
+    'hello-component': helloCompornent
   }
 });
+
+// No.136修飾子.number
+// var app = new Vue({
+//   el: '#app',
+//   data: {
+//     age: 0
+//   }
+// });
 
 // 132セレクトボックス複数の選択で初期値が表示させる場合
 // var app = new Vue({
