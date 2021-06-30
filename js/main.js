@@ -1,12 +1,14 @@
-var helloCompornent = {
-  template: '<p>hello</p>'
-}
+Vue.component('button-counter',{
+  data: function(){
+    return {
+      count: 0
+    }
+  },
+  template: '<div><span>ボタン：</span><button v-on:click="count++">{{ count }}</button></div>'
+});
 
 var app = new Vue({
-  el: '#app',
-  components:{
-    'hello-component': helloCompornent
-  }
+  el: '#app'
 });
 
 // No.136修飾子.number
