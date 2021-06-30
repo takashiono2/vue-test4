@@ -10,15 +10,14 @@
 <body>
 
   <div id="app">
-    <input type="checkbox" id="red" value="Red" v-model="colors">
+    <input type="radio" id="red" value="Red" v-model="colors">
       <label for="red">赤</label>
-    <input type="checkbox" id="blue" value="Blue" v-model="colors">
+    <input type="radio" id="blue" value="Blue" v-model="colors">
       <label for="blue">青</label>
-    <input type="checkbox" id="green" value="Green" v-model="colors">
+    <input type="radio" id="green" value="Green" v-model="colors">
       <label for="green">緑</label>
     <p>
-      {{colors}}
-    </p>
+      {{colors}}</p>
   </div>
 
   <!-- No.122v-on省略記法
