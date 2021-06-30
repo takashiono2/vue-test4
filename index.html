@@ -10,11 +10,18 @@
 <body>
   
   <div id="app">
+    <router-link to="/top">Go to Top</router-link>
+    <router-link to="/users">Go to User</router-link>
+    <router-view></router-view>
+  </div>
+
+  <!-- 142.トランジションの基礎
+  <div id="app">
     <button v-on:click="show=!show">Change</button>
     <transition>
       <p v-show="show">Hello Transition</p>
     </transition>
-  </div>
+  </div> -->
 
   <!-- No.141コンポーネントのオプション  
   <div id="app">
@@ -172,9 +179,24 @@
       <input type="text" v-model:value="mm">mm
     </p>
   </div> -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="https://unpkg.com//vue@2.6.10"></script>
+  <script src="https://unpkg.com/vue-router@3.0.6"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script> -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script> -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script> -->
-  <script src="js/main.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+  <script>
+    const Top = { template: '<div>Top</div>' }
+    const User = { template: '<div>User</div>' }
+
+    const router = new VueRouter({
+      routes:[{ path: '/top',component: Top },{ path: '/Users',component: User }]
+    })
+
+    const app = new Vue({
+      router: router
+    }).$mount('#app')
+  </script>
 </body>
+</html>
 </html>
