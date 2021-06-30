@@ -9,7 +9,15 @@
 </head>
 <body>
   <div id="app">
-    <select v-model="selected">
+    <input type="text" v-model.lazy="message">
+    <p>
+      {{ message }}
+    </p>
+  </div>
+
+  <!-- 132セレクトボックス複数の選択で初期値が表示させる場合
+  <div id="app">
+    <select v-model="selected" multiple>
       <option disabled value="">選択してください</option>
       <option value="red">RED</option>
       <option value="green">GREEN</option>
@@ -18,7 +26,7 @@
     <p>
       {{ selected }}
     </p>
-  </div>
+  </div> -->
 
   <!-- 131セレクトボックス単体の選択で初期値が表示させる場合
   <div id="app">

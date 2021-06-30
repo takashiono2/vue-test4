@@ -1,9 +1,17 @@
 var app = new Vue({
   el: '#app',
   data: {
-    selected:''
+    message: ''
   }
 });
+
+// 132セレクトボックス複数の選択で初期値が表示させる場合
+// var app = new Vue({
+//   el: '#app',
+//   data: {
+//     selected:[]
+//   }
+// });
 
 // 131セレクトボックス単体の選択で初期値が表示させる場合
 // var app = new Vue({
