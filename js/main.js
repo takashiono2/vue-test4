@@ -1,15 +1,23 @@
-Vue.component('button-counter',{
-  data: function(){
-    return {
-      count: 0
-    }
-  },
-  template: '<div><span>ボタン：</span><button v-on:click="count++">{{ count }}</button></div>'
+var app = new Vue({
+  el: '#app',
+  data: {
+    show: false
+  }
 });
 
-var app = new Vue({
-  el: '#app'
-});
+// No.141コンポーネントのオプション  
+// Vue.component('button-counter',{
+//   data: function(){
+//     return {
+//       count: 0
+//     }
+//   },
+//   template: '<div><span>ボタン：</span><button v-on:click="count++">{{ count }}</button></div>'
+// });
+
+// var app = new Vue({
+//   el: '#app'
+// });
 
 // No.136修飾子.number
 // var app = new Vue({

@@ -10,10 +10,18 @@
 <body>
   
   <div id="app">
-    <button-counter></button-counter>
-    <button-counter></button-counter>
-    <button-counter></button-counter>
+    <button v-on:click="show=!show">Change</button>
+    <transition>
+      <p v-show="show">Hello Transition</p>
+    </transition>
   </div>
+
+  <!-- No.141コンポーネントのオプション  
+  <div id="app">
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+  </div> -->
 
   <!-- No.136修飾子.number
   <div id="app">
