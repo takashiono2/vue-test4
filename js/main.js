@@ -1,9 +1,25 @@
 var app = new Vue({
   el: '#app',
   data: {
-    colors: ''
+    selected:''
   }
 });
+
+// 131セレクトボックス単体の選択で初期値が表示させる場合
+// var app = new Vue({
+//   el: '#app',
+//   data: {
+//     selected: document.getElementById('example')? document.getElementById('example').value : ''
+//   }
+// });
+
+// 130.ラジオボタン
+// var app = new Vue({
+//   el: '#app',
+//   data: {
+//     colors: ''
+//   }
+// });
 
 // No.122v-on省略記法
 // var app = new Vue({
