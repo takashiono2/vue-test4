@@ -8,13 +8,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+  
   <div id="app">
-    <router-link to="/top">Go to Top</router-link>
-    <!-- <router-link to="/users/123">Go to User</router-link> -->
-    <router-link :to="{ name: 'user', params: { userId:123 }}">Go to User</router-link>
+    <router-link to="/">Home</router-link>
+    <router-link to="/users/123">User</router-link>
+    <router-link to="/users/123/profile">Profile</router-link>
+    <router-link to="/users/123/posts">Posts</router-link>
     <router-view></router-view>
   </div>
+
+  <!-- No.155名前付きのルート
+  <div id="app">
+    <router-link to="/top">Go to Top</router-link>
+    <router-link :to="{ name: 'user', params: { userId:123 }}">Go to User</router-link>
+    <router-view></router-view>
+  </div> -->
 
   <!-- No.153動作確認-はじめてのVue Router  
   <div id="app">

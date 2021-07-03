@@ -1,20 +1,67 @@
-const Top = { template: '<div>Top</div>' }
-const User = { template: '<div>User {{$route.params.userId}}</div>' }
+const User = { 
+  template: `
+    <div class="user">
+      <h2>User {{$route.params.userId}}</h2>
+      <router-view></router-view>
+    </div>
+  `
+  }
+
+  const Profile = { 
+    template: `
+      <div class="profile">
+        <h2>Profile {{ $route.params.userId }}</h2>
+      </div>
+    `
+    }
+
+    const Posts = { 
+      template: `
+        <div class="posts">
+          <h2>Posts {{ $route.params.userId }}</h2>
+        </div>
+      `
+      }
 
 const router = new VueRouter({
   routes:[
     { 
-    path: '/top',
-    component: Top 
-    },{ 
     path: '/Users/:userId',
-    name: 'user',
-    component: User 
+    component: User,
+      children: [
+        {  
+        path: 'profile',
+        component: Profile
+        },
+        {  
+        path: 'posts',
+        component: Posts
+        },
+      ]
     }
   ]
 })
 
 const app = new Vue({router: router}).$mount('#app')
+
+// No.155名前付きのルート
+// const Top = { template: '<div>Top</div>' }
+// const User = { template: '<div>User {{$route.params.userId}}</div>' }
+
+// const router = new VueRouter({
+//   routes:[
+//     { 
+//     path: '/top',
+//     component: Top 
+//     },{ 
+//     path: '/Users/:userId',
+//     name: 'user',
+//     component: User 
+//     }
+//   ]
+// })
+
+// const app = new Vue({router: router}).$mount('#app')
 
 // No153.動作確認-はじめてのVue Router
 // var app = new Vue({
