@@ -8,6 +8,7 @@ const router = new VueRouter({
     component: Top 
     },{ 
     path: '/Users/:userId',
+    name: 'user',
     component: User 
     }
   ]
