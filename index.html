@@ -11,11 +11,19 @@
   
   <div id="app">
     <router-link to="/">Home</router-link>
+    <router-link to="/a">A</router-link>
+    <router-link to="/b">B</router-link>
+    <router-view></router-view>
+  </div>
+
+  <!-- No.156ネストされたルート
+  <div id="app">
+    <router-link to="/">Home</router-link>
     <router-link to="/users/123">User</router-link>
     <router-link to="/users/123/profile">Profile</router-link>
     <router-link to="/users/123/posts">Posts</router-link>
     <router-view></router-view>
-  </div>
+  </div> -->
 
   <!-- No.155名前付きのルート
   <div id="app">
