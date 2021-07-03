@@ -1,7 +1,7 @@
-const B = { 
+const A = { 
   template: `
     <div>
-      <h2>This is B.</h2>
+      <h2>This is A.</h2>
     </div>
   `
   }
@@ -10,11 +10,8 @@ const router = new VueRouter({
   routes:[
     { 
       path: '/a',
-      redirect: '/b'
-    },
-    { 
-      path: '/b',
-      component: B
+      component: A,
+      alias: '/b'
     }
   ]
 })
