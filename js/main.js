@@ -1,9 +1,27 @@
-var app = new Vue({
-  el: '#app',
-  data: {
-    show: false
-  }
-});
+const Top = { template: '<div>Top</div>' }
+const User = { template: '<div>User {{$route.params.userId}}</div>' }
+
+const router = new VueRouter({
+  routes:[
+    { 
+    path: '/top',
+    component: Top 
+    },{ 
+    path: '/Users/:userId',
+    component: User 
+    }
+  ]
+})
+
+const app = new Vue({router: router}).$mount('#app')
+
+// No153.動作確認-はじめてのVue Router
+// var app = new Vue({
+//   el: '#app',
+//   data: {
+//     show: false
+//   }
+// });
 
 // No.141コンポーネントのオプション  
 // Vue.component('button-counter',{

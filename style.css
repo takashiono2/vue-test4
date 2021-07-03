@@ -1,10 +1,10 @@
-.v-enter-active, .v-leave-active{
+/* .v-enter-active, .v-leave-active{
   transition: opacity .5s;
 }
 
 .v-enter, .v-leave-to{
   opacity: 0;
-}
+} */
 
 /* .large{
   font-size: 64px;
